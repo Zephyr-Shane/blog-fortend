@@ -1,0 +1,3 @@
+# 这个配置文件用于链接阿里云的个人镜像仓库的，git 中记得忽略
+ALIYUN_USERNAME=阿里云账号
+ALIYUN_PASSWORD=密码

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+<rect width="800" height="450" fill="#F4F2EC"/>
+<rect x="0" y="0" width="800" height="450" fill="none" stroke="#E8E4DB" stroke-width="2"/>
+<circle cx="640" cy="90" r="150" fill="none" stroke="#2E6B5B" stroke-width="1.5" opacity="0.35"/>
+<circle cx="640" cy="90" r="110" fill="none" stroke="#2E6B5B" stroke-width="1.5" opacity="0.2"/>
+<rect x="70" y="300" width="120" height="6" fill="#E07B39"/>
+<text x="70" y="250" font-family="serif" font-size="52" font-weight="600" fill="#2E6B5B">状态机</text>
+<text x="72" y="290" font-family="sans-serif" font-size="18" fill="#766E65" letter-spacing="3">FINITE STATE MACHINE</text>
+</svg>

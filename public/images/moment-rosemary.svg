@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+<rect width="600" height="400" fill="#F4F2EC"/>
+<rect x="0" y="0" width="600" height="400" fill="none" stroke="#E8E4DB" stroke-width="2"/>
+<circle cx="450" cy="110" r="55" fill="#E07B39" opacity="0.25"/>
+<path d="M0 320 L160 200 L280 300 L400 180 L600 330 L600 400 L0 400 Z" fill="#2E6B5B" opacity="0.18"/>
+<path d="M0 350 L200 250 L340 340 L480 240 L600 350" fill="none" stroke="#2E6B5B" stroke-width="2" opacity="0.5"/>
+<text x="30" y="60" font-family="serif" font-size="20" fill="#766E65">迷迭香与雨后</text>
+</svg>

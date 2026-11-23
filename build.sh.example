@@ -1,0 +1,19 @@
+#!/bin/bash
+# Ensure the script exits if any command fails
+set -e
+# NEXT_PUBLIC_API_BASE_URL 在 next build 时写死进镜像，且服务端 + 浏览器端共用。
+# 这里必须填浏览器能解析的公网地址（域名或公网 IP），不能填 Docker 容器名——
+# 浏览器不认识容器名，后台登录/评论/上传等客户端请求会全部失败。
+# 本地调试可传 http://localhost:8080/api 覆盖。
+DEFAULT_API_URL="http://自己的服务器IP:8080/api"
+API_URL=${1:-$DEFAULT_API_URL}
+
+echo "Building Docker image with API Base URL: $API_URL"
+
+docker buildx build --platform linux/amd64 \
+  --provenance=false \
+  --sbom=false \
+  --build-arg NEXT_PUBLIC_API_BASE_URL="$API_URL" \
+  --load -t shenzhien/zephyr-blog-frontend:1.0 .
+
+echo "Build complete. Image tagged as zephyr-blog-frontend:1.0"

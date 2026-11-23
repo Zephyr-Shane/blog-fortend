@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+/* Warm Editorial 设计系统 token
+   主色已按决定统一为 #2E6B5B（解决 DESIGN.md 内部 #0f5344 / #2E6B5B 冲突） */
+@theme inline {
+  --color-canvas: #FAF9F6;
+  --color-surface: #FFFFFF;
+  --color-ink: #24211D;
+  --color-ink-soft: #766E65;
+  --color-primary: #2E6B5B;
+  --color-primary-hover: #245548;
+  --color-primary-soft: rgba(46, 107, 91, 0.12);
+  --color-accent: #E07B39;
+  --color-accent-soft: rgba(224, 123, 57, 0.12);
+  --color-line: #E8E4DB;
+  --color-line-strong: #DDD7CB;
+  --color-code-bg: #F4F2EC;
+
+  --font-serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", serif;
+  --font-sans: "Inter", "PingFang SC", "Noto Sans SC", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Menlo, monospace;
+
+  --radius-card: 12px;
+  --radius-control: 8px;
+
+  --shadow-card: 0 1px 3px rgba(36, 33, 29, 0.04), 0 4px 12px rgba(36, 33, 29, 0.02);
+  --shadow-card-hover: 0 8px 20px rgba(36, 33, 29, 0.05);
+  --shadow-float: 0 8px 24px rgba(36, 33, 29, 0.06), 0 1px 2px rgba(36, 33, 29, 0.03);
+}
+
+:root {
+  --background: #FAF9F6;
+  --foreground: #24211D;
+}
+
+* {
+  border-color: var(--color-line);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-primary-soft);
+  color: var(--color-ink);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-line-strong);
+  border-radius: 9999px;
+  border: 3px solid var(--color-canvas);
+}
+
+@layer utilities {
+  .reading-measure {
+    max-width: 680px;
+  }
+
+  .content-column {
+    max-width: 1120px;
+  }
+
+  .prose-column {
+    max-width: 720px;
+  }
+}
+
+.article-body {
+  font-size: 17px;
+  line-height: 1.85;
+  color: var(--color-ink);
+}
+
+.article-body p {
+  margin: 1.5rem 0;
+}
+
+.article-body h2 {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 2.5rem 0 1rem;
+  padding-left: 0.75rem;
+  border-left: 3px solid var(--color-primary);
+  line-height: 1.4;
+  scroll-margin-top: 96px;
+}
+
+.article-body h3 {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 2rem 0 0.8rem;
+  scroll-margin-top: 96px;
+}
+
+.article-body blockquote {
+  margin: 1.8rem 0;
+  padding: 1rem 1.5rem;
+  border-left: 3px solid var(--color-primary);
+  background: var(--color-primary-soft);
+  border-radius: 0 var(--radius-control) var(--radius-control) 0;
+  color: var(--color-ink-soft);
+  font-family: var(--font-serif);
+}
+
+.article-body code {
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  background: var(--color-code-bg);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  color: var(--color-primary);
+}
+
+.article-body pre {
+  margin: 1.8rem 0;
+  background: var(--color-code-bg);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-control);
+  padding: 1.25rem 1.5rem;
+  overflow-x: auto;
+}
+
+.article-body pre code {
+  background: none;
+  padding: 0;
+  color: var(--color-ink);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.article-body img {
+  border-radius: var(--radius-card);
+  margin: 1.8rem 0;
+  border: 1px solid var(--color-line);
+  max-width: 100%;
+  height: auto;
+}
+
+.article-body img.ProseMirror-selectednode {
+  outline: 2px solid var(--color-primary);
+}

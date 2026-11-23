@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160">
+<rect width="160" height="160" rx="20" fill="#F4F2EC"/>
+<rect x="1" y="1" width="158" height="158" rx="20" fill="none" stroke="#E8E4DB" stroke-width="2"/>
+<circle cx="80" cy="80" r="52" fill="none" stroke="#E07B39" stroke-width="2" opacity="0.7"/>
+<text x="80" y="95" text-anchor="middle" font-family="serif" font-size="44" font-weight="600" fill="#2E6B5B">云</text>
+</svg>
